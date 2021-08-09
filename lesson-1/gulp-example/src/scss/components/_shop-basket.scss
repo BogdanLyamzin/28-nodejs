@@ -1,0 +1,59 @@
+.shop-basket {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: $first-color;
+    z-index: 10;
+
+    &-item {
+        display: grid;
+        grid-template-columns: 110px auto;
+
+        &-photo {
+            background-color: $second-color;
+            height: 100px;
+            padding: 10px;
+            text-align: center;
+
+            &-img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+
+        &-content {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 5px;
+            padding: 15px;
+        }
+
+        &-name {
+            line-height: 1.2;
+        }
+    }
+
+    &-sum {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        padding: 20px;
+
+        &-number {
+            justify-self: end;
+        }
+    }
+
+    &-btn {
+        display: inline-block;
+        padding: 16px 0;
+        width: 100%;
+        color: $first-color;
+        background-color: $main-color;
+        text-align: center;
+        text-decoration: none;
+    }
+}

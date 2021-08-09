@@ -1,0 +1,6 @@
+.products {
+    background-color: $second-color;
+    margin-top: $nav-height;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

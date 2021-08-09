@@ -1,0 +1,38 @@
+.main-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: $calc-vh-height;
+    margin-top: $nav-height;
+
+    @media(max-width: 475px){
+        grid-template-columns: 1fr;
+        height: $calc-vh-height-mobile;
+    }
+
+    &-item {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        font-size: 75px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $first-color;
+        transition: 0.4s;
+        
+        &._1 {
+            background-color: $second-color;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+
+        &._2 {
+            background-color: $main-color;
+
+            &:hover {
+                color: $second-color;
+            }
+        }
+    }
+}

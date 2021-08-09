@@ -1,0 +1,181 @@
+.order {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin-top: $nav-height;
+    padding-top: 60px;
+
+    &-form {
+        padding: 0 14%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 14%;
+
+        &-tabs {
+            // display: grid;
+            // grid-template-columns: repeat(2, 50%);
+            // grid-column-gap: 14%;
+
+            &-item {
+                display: grid;
+                align-items: center;
+                grid-template-columns: repeat(2, auto);
+                justify-content: start;
+                font-size: 24px;
+                color: $second-color;
+                text-transform: uppercase;
+                margin-bottom: 60px;
+
+                &-num {
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid $second-color;
+                    margin-right: 16px;
+                    transition: 0.4s;
+                }
+
+                &.selected &-num {
+                    color: $first-color;
+                    background-color: $second-color;
+                }
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        // &-content {
+        //     padding-top: 60px;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     flex-wrap: wrap;
+        // }
+
+        &-label {
+            display: inline-block;
+            width: 100%;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        &-input {
+            padding: 15px;
+            font-size: 20px;
+            margin-bottom: 35px;
+            box-sizing: border-box;
+        }
+
+        &-btn {
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px 44px;
+            color: $first-color;
+            background-color: $second-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            outline: none;
+            margin-top: 25px;
+            justify-self: end;
+            align-self: baseline;
+        }
+    }
+
+
+    &-list {
+        padding-right: 14%;
+
+        &-item {
+            display: grid;
+            grid-template-columns: 135px auto;
+            margin-bottom: 10px;
+
+            &-photo {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                background-color: $second-color;
+                height: 135px;
+                text-align: center;
+    
+                &-img {
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            &-content {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 5px;
+                padding: 10px 0 10px 25px;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+            &-name {
+                line-height: 1.2;
+            }
+
+            &-price {
+                justify-self: end;
+            }
+
+            &-counter {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                align-items: center;
+                justify-content: start;
+
+                &-num {
+                    font-size: 12px;
+                    margin: 0 10px;
+                }
+
+                &-btn {
+                    position: relative;
+                    width: 25px;
+                    height: 25px;
+                    border: 1px solid $second-color;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 9px;
+                        height: 1px;
+                        background-color: $second-color;
+                        top: 11px;
+                        left: 7px;
+                    }
+
+                    &._plus::after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 9px;
+                        background-color: $second-color;
+                        top: 7px;
+                        left: 11px;
+                    }
+                }
+            }
+        }
+
+        &-sum {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-top: 30px;
+    
+            &-number {
+                justify-self: end;
+            }
+        }
+    }
+}

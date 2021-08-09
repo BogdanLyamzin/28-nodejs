@@ -1,0 +1,31 @@
+.products-item {
+    display: grid;
+    grid-template-rows: 75% 25%;
+    text-align: center;
+    height: $calc-vh-height;
+    color: $first-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.4s;
+    box-sizing: border-box;
+    padding: 15px;
+
+    &:hover {
+        color: $main-color;
+    }
+
+    &-img {
+        height: 100%;
+        background: center/cover no-repeat;
+        margin: 0 auto;
+    }
+
+    &-descript {
+        padding-top: 20px;
+    }
+
+    &-text {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+}

@@ -1,0 +1,12 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media(max-width: 475px) {
+        width: 100%;
+    }
+}
