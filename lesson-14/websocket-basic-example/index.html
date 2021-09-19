@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const ws = new WebSocket("ws://localhost:5000");
+
+        ws.onopen = ()=>{
+            // console.log("Соединение с веб-сокет сервером установлено");
+        }
+
+        ws.onmessage = (event)=> {
+            console.log(event.data);
+            ws.send("И вам привет!");
+        }
+
+        ws.onclose = ()=>{
+            
+        }
+
+
+    </script>
+</body>
+</html>
